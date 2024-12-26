@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="category.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="d1">
+            <h1 class="h1">Newborn</h1>
+            <ul class="u1">
+                <li class="i1"><a href="" class="a1">Обзор</a></li>
+                <li class="i1"><a href="/history" class="a1">История</a></li>
+                <li class="i1"><a href="/order" class="a1">Добавить заказ</a></li>
+                <li class="i1"><a href="/assorty" class="a1">Ассортимент</a></li>
+                <li class="i1"><a href="/category" class="a1">Категории</a></li>
+            </ul>
+            <button class="b1">Выйти</button>
+        </div>
+    </div>
+    <main>
+        <div class="header">
+            <h1 class="h2">Категории</h1>
+        </div>
+        <div class="d2">
+                <form action="/category" method="post">
+                    <input type="text" name="category">
+                    <input type="submit">
+                </form>
+        </div>
+        <div class="category">
+            {{#each cat}}
+                <div class="category-item" >
+                <a href="/assorty/{{this._id}}" class="a2">{{this.nameCategory}}</a>
+                <a href="/category/delete/{{this._id}}" class="a2">Удалить</a>
+            </div>
+            {{/each}}
+        </div>
+    </main>
+</body>
+</html>
