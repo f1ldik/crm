@@ -37,7 +37,7 @@ module.exports.login = async function(req, res){
         const token=jwt.sign({
             email:candidate.email,
             userId:candidate._id
-        }, configKey.jwt,{expiresIn:60*2})
+        }, configKey.jwt,{expiresIn:60*5})
         res.cookie('Authorization', token);
         res.redirect('/home')
     }
