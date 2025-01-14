@@ -67,15 +67,14 @@ main{
 .category{
     border: 2px solid white;
     width: 80%;
-    min-height: 400px;
+    height: 400px;
     background-color: #eaeaea;
     margin-left: 15px;
-    overflow: hidden, scroll;
+    overflow-y:  scroll;
 }
 .category-item{
     display: flex;
     justify-content: space-between;
-    width: 862px;
     background-color: #808080;
     border-bottom: solid 2px #eaedff;
     padding: 15px;
